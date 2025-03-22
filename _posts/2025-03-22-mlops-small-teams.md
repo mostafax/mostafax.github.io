@@ -2,7 +2,7 @@
 title: "Building a Scalable MLOps Foundation in the Cloud – Part 1: Small Teams Setup"
 date: 2025-03-22
 layout: post
-categories: mlops aws small-teams
+categories: mlops small-teams
 ---
 
 ## Intro
@@ -17,19 +17,15 @@ In this first part of the series, we'll explore how small ML teams can set up an
 
 ## 1. The Problem with Manual ML Workflows
 
-- Code is stuck in Jupyter notebooks.  
-- Manual retraining eats up valuable time.  
-- No version control or automation.  
-- Lack of monitoring leads to model drift going unnoticed.
+If you’ve experienced the chaos of manually copying Jupyter notebooks between laptops or trying to remember exactly which library version you used last week, you already know the pain. Without proper version control, consistent environments, or automated processes, your small team can lose days (or even weeks) just backtracking on previous experiments. Model drift can sneak by undetected, because there’s no structured monitoring. And if a business stakeholder asks, “Why did our model accuracy drop last month?” you might be stuck sifting through old notebooks and ad-hoc notes, hoping to find a clue.
 
 ---
 
 ## 2. The MLOps Goals for Small Teams
 
-- Improve collaboration and reproducibility  
-- Automate training and deployment workflows  
-- Add version control for code, environments, and models  
-- Begin monitoring for model performance drift
+The main goal here is to keep your daily ML operations from collapsing under their own weight. Collaboration should be easy, and every step—from data ingestion to model deployment—should be trackable. Automation is also key. When you’ve only got a handful of data scientists, you can’t afford to waste time manually retraining or re-deploying models. Add to this the ability to detect model performance issues early and you have a good baseline for a smooth, scalable workflow.
+
+In short, you want to improve collaboration, enforce version control (for both code and data), automate training and deployments where possible, and make sure you’re keeping a close eye on how your models are actually performing in the wild.
 
 ---
 
@@ -44,7 +40,7 @@ In this first part of the series, we'll explore how small ML teams can set up an
 - **Container Registry** (e.g., Docker Hub, GitHub Container Registry): For storing versioned training and inference environments.  
 - **Pipeline Orchestrator** (e.g., Kubeflow Pipelines, Airflow): For automating data processing, model training, and evaluation workflows.  
 - **Model Registry & Experiment Tracking** (e.g., MLflow, Weights & Biases): For managing model versions and experiment metadata.  
-- **Event-Driven Deployment Functions** (e.g., AWS Lambda): For triggering automated deployments of validated models.  
+- **Event-Driven Deployment Functions** (e.g., AWS Lambda, Cloud fuction): For triggering automated deployments of validated models.  
 - **ML Production Environment** (e.g., SageMaker Endpoints, Kubernetes Clusters): For scalable model hosting and serving.  
 - **Monitoring & Logging Stack** (e.g., Prometheus, ELK Stack): For performance tracking, drift detection, and observability.  
 - **API Gateway**: For exposing model inference endpoints to users securely.
@@ -53,7 +49,7 @@ In this first part of the series, we'll explore how small ML teams can set up an
 
 ## 4. Deployment Strategy
 
-- **Event-driven model deployment**: New models registered in MLflow or Weights & Biases trigger automated workflows using AWS Lambda.  
+- **Event-driven model deployment**: New models registered in MLflow or Weights & Biases trigger automated workflows using AWS Lambda or.  
 - **Targeted deployment environments**: Models are deployed to SageMaker, Kubernetes, or custom compute instances.  
 - **Canary deployments**: New versions are tested in parallel using champion-challenger patterns.  
 - **Auto-scaling endpoints**: Infrastructure is configured to scale automatically based on demand.  
