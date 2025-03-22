@@ -79,6 +79,6 @@ This setup provides small teams with a solid foundation to develop, deploy, and 
 
 But as your team scales, your MLOps stack must evolve to support more users, models, and complexity.
 
-👉 _Stay tuned for Part 2: Scaling MLOps for Medium Teams – coming soon!_
+**👉 _Stay tuned for Part 2: Scaling MLOps for Medium Teams – coming soon!_**
 
 ---
