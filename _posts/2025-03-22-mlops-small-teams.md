@@ -61,6 +61,9 @@ In this first part of the series, we'll explore how small ML teams can set up an
 
 ---
 
+![MLOps architecture](/images/arch.png)
+
+
 ## 5. Benefits of This Setup
 
 - Lightweight and easy to manage  
