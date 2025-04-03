@@ -13,7 +13,7 @@ In [Part 1](https://mostafax.github.io/mlops-small-teams/), we looked at how sma
 
 When you hit 4 to 10 people, you're no longer a tiny team. You’ve got more experiments running, more models to maintain, and more opinions in every discussion. That simple setup that once worked great? It starts showing cracks.
 
-This post is about scaling that original setup without losing your mind. We’ll go over the new challenges medium teams face, and how to upgrade your MLOps stack just enough to stay fast, collaborative, and in control.
+This Blog is about scaling that original setup without losing your mind. We’ll go over the new challenges medium teams face, and how to upgrade your MLOps stack just enough to stay fast, collaborative, and in control.
 
 ---
 
@@ -84,8 +84,10 @@ As your team grows, so does the need for clarity and structure in your MLOps arc
 - **Container registry** to version and store Docker environments for training and inference
 - **Model registry and experiment tracking** using MLflow or Weights & Biases
 - **Event-driven deployments** triggered via serverless functions (e.g., AWS Lambda or Google Cloud Functions)
-- **CI/CD pipelines** powered by tools like Jenkins or ArgoCD
+- **CI/CD pipelines** powered by tools like **Jenkins** for automated builds, testing, and integration.
+- **Automated deployments** managed by **ArgoCD**, providing GitOps-based workflows for deploying models reliably and quickly.
 - **Staging and production environments** for model serving using SageMaker Endpoints, Kubernetes clusters, or custom infrastructure
+- **Inference data storage** in a cloud bucket (e.g., **Amazon S3**) to capture model predictions, which can later be reused for feature engineering, model retraining, or drift analysis
 - **Monitoring and observability stack** (Prometheus, ELK) to track metrics, logs, and model drift
 - **API Gateways** to securely serve predictions to internal teams or users
 
@@ -108,19 +110,7 @@ You’re not just “deploying and forgetting” anymore—now it’s about main
 
 ---
 
-## 6. Who Does What? Clarifying Team Roles
-
-As your team grows, roles start to specialize. You don’t need strict titles, but you do need clarity.
-
-- **Data Scientists** focus on experimentation, feature engineering, and model performance.
-- **ML Engineers** build and maintain pipelines, model packages, and deployment automation.
-- **DevOps/Platform Engineers** handle cloud infrastructure, monitoring, and CI/CD systems.
-
-Clear responsibilities reduce duplication and help everyone stay focused on what matters most.
-
----
-
-## 7. Security, Roles & Access
+## 6. Security, Roles & Access
 
 More teammates = more access. It’s time to be thoughtful about security.
 
@@ -139,5 +129,3 @@ Growing a team is exciting—but it also means your MLOps setup has to grow with
 The key is to **build on top of your existing foundation**. Keep what works, automate what’s slowing you down, and put just enough structure in place to stay productive without overcomplicating things.
 
 In Part 3, we’ll explore how this setup evolves for **large enterprise teams**—with a focus on **compliance**, **multi-region infrastructure**, **resource optimization**, and **cross-team collaboration** at scale.
-
----
