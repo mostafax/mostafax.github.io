@@ -36,14 +36,14 @@ The good news? You don’t have to throw out everything from Part 1. Most of it 
 
 But you **do** need to level things up:
 
-| For small teams                 | Now, as you scale                               |
-|---------------------------------|--------------------------------------------------|
-| JupyterHub or SageMaker Studio  | Add shared environments with user permissions    |
-| Git + DVC                       | Enforce branching strategies and versioning rules|
-| Manual pipeline triggers        | CI/CD integrated with orchestrators              |
-| Basic model registry            | Approval workflows + tagging in MLflow           |
-| Single notebook                 | Modular, reusable codebase                       |
-| Single environment              | Separate dev, staging, prod environments         |
+| For small teams                   | Now, as you scale                               |
+|-----------------------------------|--------------------------------------------------|
+| JupyterHub or SageMaker Studio    | Add shared environments with user permissions    |
+| Git + DVC                         | Enforce branching strategies and versioning rules|
+| Manual pipeline triggers          | CI/CD integrated with orchestrators              |
+| Basic model registry              | Approval workflows + tagging in MLflow           |
+| Single notebook                   | Modular, reusable codebase                       |
+| Single environment                | Separate dev, staging, prod environments         |
 
 ---
 
