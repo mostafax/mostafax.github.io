@@ -5,6 +5,8 @@ layout: post
 categories: mlops medium-teams
 ---
 
+> How to upgrade your MLOps stack and workflows as your team grows beyond notebooks and quick hacks.
+
 ## Intro
 
 In [Part 1](https://mostafax.github.io/mlops-small-teams/), we looked at how small ML teams (usually 1 to 3 people) can set up a lightweight and practical MLOps foundation in the cloud. But as your team grows and more models make it to production, things start to get messy—fast.
@@ -34,14 +36,14 @@ The good news? You don’t have to throw out everything from Part 1. Most of it 
 
 But you **do** need to level things up:
 
-| For small teams                  | Now, as you scale                           |
-|----------------------------------|----------------------------------------------|
-| JupyterHub or SageMaker Studio  | Add shared environments with user permissions |
-| Git + DVC                       | Enforce branching strategies and versioning rules |
-| Manual pipeline triggers        | CI/CD integrated with orchestrators          |
-| Basic model registry            | Approval workflows + tagging in MLflow       |
-| Single notebook                 | Modular, reusable codebase                   |
-| Single environment              | Separate dev, staging, prod environments     |
+| For small teams                 | Now, as you scale                               |
+|---------------------------------|--------------------------------------------------|
+| JupyterHub or SageMaker Studio  | Add shared environments with user permissions    |
+| Git + DVC                       | Enforce branching strategies and versioning rules|
+| Manual pipeline triggers        | CI/CD integrated with orchestrators              |
+| Basic model registry            | Approval workflows + tagging in MLflow           |
+| Single notebook                 | Modular, reusable codebase                       |
+| Single environment              | Separate dev, staging, prod environments         |
 
 ---
 
@@ -70,25 +72,26 @@ You don’t want someone babysitting model deployments all day. Instead:
 
 And yeah—monitor everything. Drift, latency, accuracy, resource usage. Tools like Prometheus and Grafana will save your weekend.
 
-## MLOps Architecture (Medium Team Setup) 
+---
 
-Let’s visualize what the updated MLOps stack might look like for a medium-sized team.
+## MLOps Architecture (Medium Team Setup)
 
-At this stage, you’ll likely have:
+As your team grows, so does the need for clarity and structure in your MLOps architecture. Below is an example of how a medium-sized team (4–10 people) can organize their MLOps stack in the cloud:
 
-- A shared cloud development environment (e.g., JupyterHub or SageMaker Studio)
-- Git + DVC for version control of code and data
-- CI/CD pipelines connected to an orchestrator like Kubeflow Pipelines or Argo
-- A feature store to centralize and reuse engineered features
-- A model registry with approval workflows (e.g., MLflow)
-- Staging and production environments for model serving
-- Automated deployment triggers (with canary rollout support)
-- Monitoring via Prometheus, Grafana, or ELK
-- Secrets and permissions managed via Vault or a cloud-native secrets manager
+- **Shared ML development environment** using tools like JupyterHub, SageMaker Studio, or Vertex AI Workbench
+- **Version control** for both code (via Git) and data (via DVC)
+- **Pipeline orchestrators** like Kubeflow or Airflow to automate data processing, training, and evaluation
+- **Container registry** to version and store Docker environments for training and inference
+- **Model registry and experiment tracking** using MLflow or Weights & Biases
+- **Event-driven deployments** triggered via serverless functions (e.g., AWS Lambda or Google Cloud Functions)
+- **CI/CD pipelines** powered by tools like Jenkins or ArgoCD
+- **Staging and production environments** for model serving using SageMaker Endpoints, Kubernetes clusters, or custom infrastructure
+- **Monitoring and observability stack** (Prometheus, ELK) to track metrics, logs, and model drift
+- **API Gateways** to securely serve predictions to internal teams or users
 
-![MLOps medium team architecture](/images/medium-team-mlops.png)
+![MLOps Architecture – Medium Teams](/images/meduim-team-mlops.png)
 
-This setup helps you maintain speed while introducing enough structure to support more teammates, more models, and more complexity.
+This architecture gives your team the balance it needs: speed when you want to move fast, and structure when things get complex. You don’t need to go full-enterprise to scale—just be intentional with your tools, workflows, and responsibilities.
 
 ---
 
@@ -105,7 +108,19 @@ You’re not just “deploying and forgetting” anymore—now it’s about main
 
 ---
 
-## 6. Security, Roles & Access
+## 6. Who Does What? Clarifying Team Roles
+
+As your team grows, roles start to specialize. You don’t need strict titles, but you do need clarity.
+
+- **Data Scientists** focus on experimentation, feature engineering, and model performance.
+- **ML Engineers** build and maintain pipelines, model packages, and deployment automation.
+- **DevOps/Platform Engineers** handle cloud infrastructure, monitoring, and CI/CD systems.
+
+Clear responsibilities reduce duplication and help everyone stay focused on what matters most.
+
+---
+
+## 7. Security, Roles & Access
 
 More teammates = more access. It’s time to be thoughtful about security.
 
@@ -117,14 +132,12 @@ Even small incidents (like overwriting a model accidentally) can be costly when 
 
 ---
 
----
-
 ## Final Thoughts
 
 Growing a team is exciting—but it also means your MLOps setup has to grow with you.
 
 The key is to **build on top of your existing foundation**. Keep what works, automate what’s slowing you down, and put just enough structure in place to stay productive without overcomplicating things.
 
-In Part 3, we’ll explore how this evolves again for **enterprise teams**—think compliance, cost optimization, and multi-region setups.
+In Part 3, we’ll explore how this setup evolves for **large enterprise teams**—with a focus on **compliance**, **multi-region infrastructure**, **resource optimization**, and **cross-team collaboration** at scale.
 
 ---
