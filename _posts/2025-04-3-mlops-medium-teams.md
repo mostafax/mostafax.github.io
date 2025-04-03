@@ -34,43 +34,25 @@ This is where you need more structure—but without making everything feel like 
 
 The good news? You don’t have to throw out everything from Part 1. Most of it still applies.
 
-But you **do** need to level things up:
+But you **do** need to level things up. Here’s how:
 
-| For small teams                   | Now, as you scale                               |
-|-----------------------------------|--------------------------------------------------|
-| JupyterHub or SageMaker Studio    | Add shared environments with user permissions    |
-| Git + DVC                         | Enforce branching strategies and versioning rules|
-| Manual pipeline triggers          | CI/CD integrated with orchestrators              |
-| Basic model registry              | Approval workflows + tagging in MLflow           |
-| Single notebook                   | Modular, reusable codebase                       |
-| Single environment                | Separate dev, staging, prod environments         |
+- **Shared ML environments:**  
+  Move from single-user JupyterHub or SageMaker Studio setups to **shared environments** with clear user permissions.
 
----
+- **Better version control:**  
+  Go beyond basic Git and DVC. Enforce clear **branching strategies**, structured pull requests, and consistent versioning practices.
 
-## 3. Better Collaboration, Less Chaos
+- **Automated pipelines:**  
+  Replace manual pipeline triggers with fully automated **CI/CD workflows** integrated into your pipeline orchestrator (like Kubeflow or Airflow).
 
-With more people, you need clearer ways to work together. Here’s what that might look like:
+- **Advanced model registry:**  
+  Extend basic model tracking by adding structured **approval workflows** and **tagging** (MLflow or Weights & Biases).
 
-### Shared Features  
-Use a feature store (like Feast) so people aren’t reinventing the same features again and again.
+- **Reusable codebase:**  
+  Transition from single notebooks to a more structured, **modular codebase** with reusable components.
 
-### Branching & Reviews  
-Adopt a Git strategy (e.g. feature branches + PRs) with required reviews. This keeps everyone in the loop and avoids surprises in production.
-
-### Modular Pipelines  
-Break up your code so training, preprocessing, evaluation, and deployment each have their own script or function. Bonus: this also helps you reuse components across projects.
-
----
-
-## 4. Smarter Automation & Deployment
-
-You don’t want someone babysitting model deployments all day. Instead:
-
-- Use CI/CD tools (like GitHub Actions or Jenkins) to trigger training and validation when new code is pushed.
-- Add staging environments to test models before full deployment.
-- Set up canary deployments to send a small % of traffic to new models, just in case something breaks.
-
-And yeah—monitor everything. Drift, latency, accuracy, resource usage. Tools like Prometheus and Grafana will save your weekend.
+- **Separate environments:**  
+  Move away from a single deployment environment to clearly defined **development, staging, and production environments**.
 
 ---
 
