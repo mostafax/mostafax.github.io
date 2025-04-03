@@ -4,6 +4,7 @@ date: 2025-03-22
 layout: post
 categories: mlops small-teams
 ---
+> A practical guide to building a lightweight MLOps foundation for small teams (1–3 people) without overengineering.
 
 ## Intro
 
