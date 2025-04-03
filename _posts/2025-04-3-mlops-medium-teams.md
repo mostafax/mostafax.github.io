@@ -70,7 +70,7 @@ You don’t want someone babysitting model deployments all day. Instead:
 
 And yeah—monitor everything. Drift, latency, accuracy, resource usage. Tools like Prometheus and Grafana will save your weekend.
 
-## MLOps Architecture (Medium Team Setup)
+## MLOps Architecture (Medium Team Setup) 
 
 Let’s visualize what the updated MLOps stack might look like for a medium-sized team.
 
