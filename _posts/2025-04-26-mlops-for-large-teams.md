@@ -1,9 +1,10 @@
 ---
-title: "Scaling MLOps for the Enterprise – Part 3: Large Teams Setup"
+title: "Building a Scalable MLOps Foundation in the Cloud – Part 3: Large Teams Setup"
 date: 2025-04-26
 layout: post
-categories: mlops large-teams
+categories: mlops
 ---
+
 
 > What happens when you go beyond 10 team members, multiple projects, and high compliance requirements? Here's how large teams scale MLOps.
 
