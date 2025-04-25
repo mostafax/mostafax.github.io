@@ -1,5 +1,5 @@
 ---
-title: "Building a Scalable MLOps Foundation in the Cloud – Part 2: Large Teams Setup"
+title: "Building a Scalable MLOps Foundation in the Cloud – Part 3: Large Teams Setup"
 date: 2025-04-26
 layout: post
 categories: mlops Large-teams
