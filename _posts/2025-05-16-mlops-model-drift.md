@@ -6,7 +6,7 @@ categories: mlops model-monitoring drift-detection
 ---
 > The comprehensive guide to detecting and responding to model drift before it impacts your business.
 
-# Model Drift Detection: Building Automated Monitoring Systems That Actually Work
+# Intro
 
 Model drift is the silent killer of machine learning systems. You've spent months building the perfect model, deployed it to production, and everything looks great. Then, weeks or months later, you notice your model's performance has degraded significantly. Sound familiar?
 
