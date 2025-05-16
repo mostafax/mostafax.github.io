@@ -1,6 +1,6 @@
 ---
 title: "Model Drift Detection: Building Automated Monitoring Systems That Actually Work"
-date: 2025-05-16
+date: 2025-03-22
 layout: post
 categories: mlops model-monitoring drift-detection
 ---
